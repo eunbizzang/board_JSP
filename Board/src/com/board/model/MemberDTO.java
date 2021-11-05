@@ -5,10 +5,7 @@ public class MemberDTO {
 	private String id;            	// id
     private String password;     	// password
     private String name;        	// name
-    private String gender;      	// gender
-    private String birthyy;       	// birthday - year
-    private String birthmm;         // birthday - month
-    private String birthdd;         // birthday - date
+    private String birthday;         // birthday - date
     private String mail1;        	// email - before@ 
     private String mail2;        	// email - @after
     private String phone;        	// phone
@@ -33,29 +30,12 @@ public class MemberDTO {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getGender() {
-		return gender;
+
+	public String getBirthday() {
+		return birthday;
 	}
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
-	public String getBirthyy() {
-		return birthyy;
-	}
-	public void setBirthyy(String birthyy) {
-		this.birthyy = birthyy;
-	}
-	public String getBirthmm() {
-		return birthmm;
-	}
-	public void setBirthmm(String birthmm) {
-		this.birthmm = birthmm;
-	}
-	public String getBirthdd() {
-		return birthdd;
-	}
-	public void setBirthdd(String birthdd) {
-		this.birthdd = birthdd;
+	public void setBirthday(String birthdd) {
+		this.birthday = birthdd;
 	}
 	public String getMail1() {
 		return mail1;

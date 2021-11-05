@@ -5,6 +5,8 @@ import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.board.model.MemberDTO;
+
 public class SignUpAction implements Action {
 
 	@Override
@@ -18,11 +20,22 @@ public class SignUpAction implements Action {
         String password = request.getParameter("password");
         String name = request.getParameter("name");
         String birthday = request.getParameter("birthday");
+        System.out.println("birthday >>>" +birthday);
         String email1 = request.getParameter("email_1");
-        String[] email2 = request.getParameterValues("email_2");
+        String[] email = request.getParameterValues("email_2");
+        String email2 = email[0];
         String phone = request.getParameter("phone");
         String address = request.getParameter("address");
 
+        MemberDTO dto = new MemberDTO();
+        dto.setId(id);
+        dto.setPassword(password);
+        dto.setName(name);
+        dto.setBirthday(birthday);
+        dto.setMail1(email1);
+        dto.setMail2(email2);
+        dto.setPhone(phone);
+        dto.setAddress(address);
         
 
 		return null;
